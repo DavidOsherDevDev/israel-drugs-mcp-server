@@ -96,8 +96,9 @@ npm start
 ```
 
 ### **Claude Desktop Configuration**
-Add to your Claude Desktop settings (`~/.claude.json` or `%APPDATA%\Claude\claude.json`):
+Add to your Claude Desktop settings (Linux or Mac: `~/.claude.json` or for Windows: `%APPDATA%\Claude\claude_desktop_config.json`):
 
+For Linux or Mac:
 ```json
 {
   "mcpServers": {
@@ -111,6 +112,21 @@ Add to your Claude Desktop settings (`~/.claude.json` or `%APPDATA%\Claude\claud
   }
 }
 ```
+For Windows (without C: for the path as this is added automatically):
+```json
+{
+  "mcpServers": {
+    "israel-drugs": {
+      "command": "node",
+      "args": ["\\path\\to\\israel-drugs-mcp-server\\dist\\index.js"],
+      "env": {},
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+```
+
 
 ---
 
@@ -554,3 +570,4 @@ For commercial use or enterprise deployment, please contact via LinkedIn or GitH
 
 **⚡ Ready to get started?**
 **[Clone Repository](https://github.com/DavidOsherDevDev/israel-drugs-mcp-server) | [View Installation Guide](#-installation)**
+
